@@ -181,7 +181,7 @@ button:hover {
     padding: 1rem;
     margin: 0;
     border-radius: 0;
-    height: 80vh;
+    height: 70vh;
     display: flex;
     flex-direction: column;
   }
@@ -207,7 +207,7 @@ button:hover {
     margin-top: 1rem;
   }
   .garage-button-container {
-    margin-top: 1rem;
+    margin-top: 2rem;
     text-align: center;
   }
 
