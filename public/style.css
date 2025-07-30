@@ -206,18 +206,6 @@ button:hover {
     flex-direction: row;
     margin-top: 1rem;
   }
-
-  #user-input {
-    flex: 1;
-    padding: 0.7rem 1rem;
-    font-size: 1rem;
-  }
-
-  button {
-    padding: 0.7rem 1rem;
-    font-size: 1rem;
-  }
-
   .garage-button-container {
     margin-top: 1rem;
     text-align: center;
@@ -230,3 +218,15 @@ button:hover {
     max-width: 280px;
   }
 }
+  #user-input {
+    flex: 1;
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+  }
+
+  button {
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+  }
+
+
