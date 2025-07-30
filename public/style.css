@@ -60,14 +60,14 @@ h1 {
 
 .user-msg {
   background: #c6efdf;
-  color: #113d29;
+  color: #000000;
   text-align: right;
   margin-left: auto;
 }
 
 .bot-msg {
   background: #dff6ed;
-  color: #155038;
+  color: #000000;
   text-align: left;
   margin-right: auto;
 }
