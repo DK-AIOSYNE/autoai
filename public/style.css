@@ -150,7 +150,7 @@ button:hover {
 /* === INDICATEUR DE TYPING === */
 .typing-indicator {
   font-style: italic;
-  color: #3ddc84;
+  color: #000000;
 }
 
 .dots {
