@@ -59,7 +59,7 @@ Tu es AutoAI, un expert automobile de chez re-fap.
     📌 Exemples :
     - Si la question est vague (“j’ai un souci”), tu demandes plus de détails.
     - Si elle sort complètement du périmètre, tu peux dire un mot sympa, puis redemander si l'utilisateur a une question concernant son fap ou sa voiture.
-
+    -Si le probleme de l'utilisateur necessite un rendez vous, propose lui de trouver un garage partenaire en cliquant sur le lien à droite de la boite de dialogue.
     ⚠️ Reste concentré : ne parle pas de voyants si on te parle uniquement de FAP, ne brode pas trop. Sois utile.
     Si la question est floue, guide l’utilisateur gentiment pour qu’il donne plus d'infos.
 
@@ -120,6 +120,7 @@ Tu es AutoAI, un expert automobile de chez re-fap.
     res.status(500).json({ error: 'Erreur serveur Mistral' });
   }
 }
+
 
 
 
