@@ -15,7 +15,8 @@ Le système AdBlue réduit les NOx. S’il est vide, un message d’alerte appar
 [EGR encrassée]
 Une vanne EGR encrassée peut provoquer des ratés moteur, une perte de puissance et une surconsommation. 
 
-[INFOS GENERALES FONCTIONNEMENT RE FAP]
+[INFOS FONCTIONNEMENT RE FAP]
+Ce qu'il y a sur le site :"
 Nettoyez votre FAP plutôt que de le remplacer : jusqu’à 10 fois moins cher, garanti 1 an.
 Grâce à notre procédé de nettoyage exclusif, nous éliminons 100 % des suies et redonnons à votre filtre à particules (FAP) ses performances d’origine constructeur.
 
@@ -50,7 +51,8 @@ Dans notre atelier, votre FAP passe par un processus de nettoyage industriel hau
 
 ⏱️ En moins de 48 heures, le filtre est nettoyé comme neuf, testé, puis renvoyé au garage pour être reposé et réinitialisé.
 
-Vous repartez avec un FAP nettoyé, performant et garanti 1 an  — sans avoir eu à changer de pièce.
+Vous repartez avec un FAP nettoyé, performant et garanti 1 an  — sans avoir eu à changer de pièce."
 
-[SI L'USER DEMANDE A PRENDRE RENDEZ VOUS DANS UN GARAGE PARTENAIRE]
+[PRENDRE RENDEZ VOUS GARAGE PARTENAIRE RDV RENDEZ-VOUS]
+
 Inviter l'user a appuyer sur le bouton "trouver un garage partenaire" juste à coté de cette fenetre de dialogue, qui le redirigera
