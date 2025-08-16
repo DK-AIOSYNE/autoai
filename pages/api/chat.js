@@ -23,23 +23,30 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: 'Erreur de lecture des données' });
   }
 
-  // Extraction des blocs correspondant aux mots-clés
-  const blocks = rawData.split(/\n(?=\[)/);
-  const keywords = question
+   // Extraction des blocs correspondant aux mots-clés
+const blocks = rawData.split(/\n(?=\[)/);
+const keywords = question
   .toLowerCase()
   .split(/\s+/)
   .filter(k => k.trim() !== "");
 
-  let matchedBlocks = blocks.filter(block =>
-    keywords.some(k => block.toLowerCase().includes(k))
-  );
+let matchedBlocks = blocks.filter(block => {
+  // On ne regarde que le titre entre crochets
+  const titleMatch = block.match(/^\[([^\]]+)\]/);
+  if (!titleMatch) return false;
+  const title = titleMatch[1].toLowerCase();
 
-  if (matchedBlocks.length === 0) {
-    matchedBlocks = ["Aucune information disponible dans les données fournies."];
-  }
+  // On garde le bloc si au moins un mot clé est dans le titre
+  return keywords.some(k => title.includes(k));
+});
 
-  const contextText = matchedBlocks.join('\n');
+console.log("Matched blocks :", matchedBlocks);
 
+if (matchedBlocks.length === 0) {
+  matchedBlocks = ["Aucune information disponible dans les données fournies."];
+}
+
+const contextText = matchedBlocks.join('\n');
   // Construction du prompt texte
   const prompt = `
     Tu es AutoAI, un expert automobile de chez re-fap. 
@@ -112,4 +119,5 @@ export default async function handler(req, res) {
     res.status(500).json({ error: 'Erreur serveur Mistral' });
   }
 }
+
 
