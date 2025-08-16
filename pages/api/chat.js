@@ -23,30 +23,37 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: 'Erreur de lecture des données' });
   }
 
-   // Extraction des blocs correspondant aux mots-clés
-const blocks = rawData.split(/\n(?=\[)/);
-const keywords = question
-  .toLowerCase()
-  .split(/\s+/)
-  .filter(k => k.trim() !== "");
+// Fusion de l'historique et de la question pour extraire les mots-clés
+  const historyText = [
+    ...(Array.isArray(historique) ? historique.map(h => h.content || h) : [historique]),
+    question
+  ]
+    .filter(Boolean)
+    .join(" ");
 
-let matchedBlocks = blocks.filter(block => {
-  // On ne regarde que le titre entre crochets
-  const titleMatch = block.match(/^\[([^\]]+)\]/);
-  if (!titleMatch) return false;
-  const title = titleMatch[1].toLowerCase();
+  const keywords = historyText
+    .toLowerCase()
+    .split(/\s+/)
+    .filter(k => k.trim() !== "");
 
-  // On garde le bloc si au moins un mot clé est dans le titre
-  return keywords.some(k => title.includes(k));
-});
+  // Extraction des blocs de data.txt
+  const blocks = rawData.split(/\n(?=\[)/);
 
-console.log("Matched blocks :", matchedBlocks);
+  let matchedBlocks = blocks.filter(block => {
+    // On ne regarde que le titre entre crochets
+    const titleMatch = block.match(/^\[([^\]]+)\]/);
+    if (!titleMatch) return false;
+    const title = titleMatch[1].toLowerCase();
 
-if (matchedBlocks.length === 0) {
-  matchedBlocks = ["Aucune information disponible dans les données fournies."];
-}
+    // On garde le bloc si au moins un mot clé (issu de tout le contexte) est dans le titre
+    return keywords.some(k => title.includes(k));
+  });
 
-const contextText = matchedBlocks.join('\n');
+  if (matchedBlocks.length === 0) {
+    matchedBlocks = ["Aucune information disponible dans les données fournies."];
+  }
+
+  const contextText = matchedBlocks.join('\n');
   // Construction du prompt texte
   const prompt = `
 Tu es AutoAI, un expert automobile de chez re-fap. 
@@ -120,6 +127,7 @@ Tu es AutoAI, un expert automobile de chez re-fap.
     res.status(500).json({ error: 'Erreur serveur Mistral' });
   }
 }
+
 
 
 
