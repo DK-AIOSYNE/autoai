@@ -25,7 +25,10 @@ export default async function handler(req, res) {
 
   // Extraction des blocs correspondant aux mots-clés
   const blocks = rawData.split(/\n(?=\[)/);
-  const keywords = question.toLowerCase().split(/\s+/);
+  const keywords = question
+  .toLowerCase()
+  .split(/\s+/)
+  .filter(k => k.trim() !== "");
 
   let matchedBlocks = blocks.filter(block =>
     keywords.some(k => block.toLowerCase().includes(k))
@@ -109,3 +112,4 @@ export default async function handler(req, res) {
     res.status(500).json({ error: 'Erreur serveur Mistral' });
   }
 }
+
