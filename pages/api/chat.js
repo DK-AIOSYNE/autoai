@@ -23,30 +23,39 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: 'Erreur de lecture des données' });
   }
 
-// Extraction des blocs correspondant aux mots-clés
-const blocks = rawData.split(/\n(?=\[)/);
-const keywords = question
-  .toLowerCase()
-  .split(/\s+/)
-  .filter(k => k.trim() !== "");
+  // Extraction des blocs
+  const blocks = rawData.split(/\n(?=\[)/);
 
-let matchedBlocks = blocks.filter(block => {
-  // On ne regarde que le titre entre crochets
-  const titleMatch = block.match(/^\[([^\]]+)\]/);
-  if (!titleMatch) return false;
-  const title = titleMatch[1].toLowerCase();
+  // Découpe la question en mots-clés
+  const keywords = question
+    .toLowerCase()
+    .split(/\s+/)
+    .filter(k => k.trim() !== "");
 
-  // On garde le bloc si au moins un mot clé est dans le titre
-  return keywords.some(k => title.includes(k));
-});
+  console.log("Keywords :", keywords);
 
-console.log("Matched blocks :", matchedBlocks);
+  let matchedBlocks = blocks.filter(block => {
+    const titleMatch = block.match(/^\[([^\]]+)\]/);
+    if (!titleMatch) return false;
+    const title = titleMatch[1].toLowerCase();
 
-if (matchedBlocks.length === 0) {
-  matchedBlocks = ["Aucune information disponible dans les données fournies."];
-}
+    // Vérifie si au moins un mot clé correspond exactement à un mot du titre
+    return keywords.some(k => {
+      const regex = new RegExp(`\\b${k}\\b`, "i");
+      const match = regex.test(title);
+      if (match) {
+      }
+      return match;
+    });
+  });
 
-const contextText = matchedBlocks.join('\n');
+  console.log("Matched blocks :", matchedBlocks);
+
+  if (matchedBlocks.length === 0) {
+    matchedBlocks = ["Aucune information disponible dans les données fournies."];
+  }
+
+  const contextText = matchedBlocks.join('\n');
   // Construction du prompt texte
   const prompt = `
 Tu es AutoAI, un expert automobile de chez re-fap. 
@@ -120,6 +129,7 @@ Tu es AutoAI, un expert automobile de chez re-fap.
     res.status(500).json({ error: 'Erreur serveur Mistral' });
   }
 }
+
 
 
 
