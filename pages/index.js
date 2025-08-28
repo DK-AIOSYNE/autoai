@@ -1,12 +1,13 @@
 import { useState, useRef, useEffect } from 'react';
 import Head from 'next/head';
+import ReactMarkdown from 'react-markdown';
 
 export default function Home() {
   const [messages, setMessages] = useState([
     {
       from: 'bot',
       text:
-        "Bonjour 👋! Je suis AutoAI, une intelligence artificielle conçue par les développeurs Re-Fap pour t'aider à diagnostiquer gratuitement des éventuels problèmes sur ton filtre à particules, et à trouver des solutions. As-tu des questions ?😄"
+        "Bonjour 👋! Je suis **AutoAI**, une intelligence artificielle conçue par les développeurs Re-Fap pour t'aider à diagnostiquer gratuitement des éventuels problèmes sur ton filtre à particules, et à trouver des solutions. As-tu des questions ?😄"
     },
   ]);
   const [input, setInput] = useState('');
@@ -75,7 +76,8 @@ export default function Home() {
           <div id="chat-window" className="chat-window">
             {messages.map((m, i) => (
               <div key={i} className={m.from === 'user' ? 'user-msg' : 'bot-msg'}>
-                <strong>{m.from === 'user' ? 'Moi' : 'AutoAI'}:</strong> {m.text}
+                <strong>{m.from === 'user' ? 'Moi' : 'AutoAI'}:</strong>
+                <ReactMarkdown>{m.text}</ReactMarkdown>
               </div>
             ))}
 
@@ -113,4 +115,3 @@ export default function Home() {
     </>
   );
 }
-
