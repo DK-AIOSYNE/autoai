@@ -106,7 +106,7 @@ Tu es AutoAI, un expert automobile de chez re-fap.
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        model: "mistral-large-latest",
+        model: "mistral-medium-latest",
         messages: [
           { role: "user", content: prompt }
         ],
@@ -133,3 +133,4 @@ Tu es AutoAI, un expert automobile de chez re-fap.
     res.status(500).json({ error: 'Erreur serveur Mistral' });
   }
 }
+
