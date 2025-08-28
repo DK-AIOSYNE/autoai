@@ -26,14 +26,18 @@ export default async function handler(req, res) {
   // Extraction des blocs
   const blocks = rawData.split(/\n(?=\[)/);
 
-  // Découpe la question + histrique en mots-clés
+  // Combine historique + question en texte unique
   const allText = `${historique} ${question}`.toLowerCase();
   const keywords = allText
-    .toLowerCase()
     .split(/\s+/)
     .filter(k => k.trim() !== "");
 
   console.log("Keywords :", keywords);
+
+  // Fonction pour échapper les caractères spéciaux dans une regex
+  function escapeRegex(str) {
+    return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  }
 
   let matchedBlocks = blocks.filter(block => {
     const titleMatch = block.match(/^\[([^\]]+)\]/);
@@ -42,11 +46,9 @@ export default async function handler(req, res) {
 
     // Vérifie si au moins un mot clé correspond exactement à un mot du titre
     return keywords.some(k => {
-      const regex = new RegExp(`\\b${k}\\b`, "i");
-      const match = regex.test(title);
-      if (match) {
-      }
-      return match;
+      const safe = escapeRegex(k);
+      const regex = new RegExp(`\\b${safe}\\b`, "i");
+      return regex.test(title);
     });
   });
 
@@ -57,6 +59,7 @@ export default async function handler(req, res) {
   }
 
   const contextText = matchedBlocks.join('\n');
+
   // Construction du prompt texte
   const prompt = `
 Tu es AutoAI, un expert automobile de chez re-fap. 
@@ -130,17 +133,3 @@ Tu es AutoAI, un expert automobile de chez re-fap.
     res.status(500).json({ error: 'Erreur serveur Mistral' });
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
