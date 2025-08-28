@@ -56,7 +56,7 @@ export default function Home() {
       setLoading(false);
       setMessages((msgs) => [
         ...msgs,
-        { from: 'bot', text: 'Erreur réseau, réessaie plus tard.' },
+        { from: 'bot', text: "Désolé, il y a eu une erreur réseau, merci d'actualiser la page :)." },
       ]);
     }
   }
@@ -113,3 +113,4 @@ export default function Home() {
     </>
   );
 }
+
