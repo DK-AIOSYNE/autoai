@@ -55,7 +55,6 @@ h1 {
   max-width: 80%;
   border-radius: 12px;
   word-wrap: break-word;
-  white-space: pre-wrap;  /* garde les \n visibles */
 }
 
 
@@ -231,6 +230,7 @@ button:hover {
     padding: 0.7rem 1rem;
     font-size: 1rem;
   }
+
 
 
 
