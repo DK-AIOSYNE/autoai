@@ -2,60 +2,104 @@
 Le nettoyage FAP proposé par Re-Fap coûte entre 99€ et 149€. Il évite un remplacement complet (2000€) et restaure les performances.
 Pour prendre rdv dans un garage partenaire, il faut juste cliquer sur le bouton associé à coté de la fenetre de dialogue.
 
-[Voyant FAP]
-Quand le voyant FAP s’allume, cela indique une saturation du filtre. Un nettoyage est souvent suffisant. Il ne faut pas rouler longtemps avec ce voyant actif.
-
 [Voyant moteur allumé]
-Un voyant moteur peut être lié à la vanne EGR, au FAP ou à un problème de combustion. Un diagnostic électronique est recommandé.
+Un voyant moteur peut être lié à la vanne EGR, au FAP ou à un problème de combustion.
 
-[Nettoyage Re-Fap]
-Le nettoyage FAP proposé par Re-Fap coûte entre 99€ et 149€. Il évite un remplacement complet (2000€) et restaure les performances.
+> Questions à poser :
+1. Le voyant moteur est-il fixe ou clignotant ?
+   - Fixe → Souvent lié à un encrassement (FAP ou EGR). → Étape suivante.
+   - Clignotant → Risque de ratés moteur graves. → Arrêt immédiat + RDV.
 
-[AdBlue]
-Le système AdBlue réduit les NOx. S’il est vide, un message d’alerte apparaît et le véhicule peut refuser de démarrer.
+2. Le voyant FAP est-il aussi allumé ?
+   - Oui → Probable saturation du FAP → Conseiller nettoyage.
+   - Non → Vérifier symptômes (perte de puissance, fumée noire, consommation élevée).
+       - Oui → Probable vanne EGR encrassée. → RDV conseillé.
+       - Non → Cause incertaine → Diagnostic électronique.
+
+👉 Conclusion : Dans tous les cas, proposer "Trouver un garage partenaire".
+
+
+[Voyant FAP]
+Quand le voyant FAP s’allume, cela indique une saturation du filtre. Un nettoyage est souvent suffisant.
+
+> Questions à poser :
+1. Le voyant vient-il de s’allumer ?
+   - Oui → Possible de rouler un peu, mais nettoyage conseillé rapidement.
+   - Non (voyant présent depuis plusieurs trajets) → Risque d’endommager le moteur → Nettoyage urgent.
+
+2. Y a-t-il perte de puissance ?
+   - Oui → Saturation avancée → RDV nécessaire.
+   - Non → Nettoyage recommandé pour éviter aggravation.
+
+👉 Conclusion : Proposer "Trouver un garage partenaire".
+
 
 [EGR encrassée]
 Une vanne EGR encrassée peut provoquer des ratés moteur, une perte de puissance et une surconsommation. 
 
+> Questions à poser :
+1. Voyez-vous de la fumée noire ?
+   - Oui → Encrassement confirmé → RDV conseillé.
+   - Non → Peut venir du FAP ou d’un capteur → Diagnostic recommandé.
+
+2. Le voyant moteur est-il aussi allumé ?
+   - Oui → Diagnostic obligatoire.
+   - Non → Si perte de puissance → Nettoyage conseillé.
+
+👉 Conclusion : Proposer "Trouver un garage partenaire".
+
+
+[AdBlue]
+Le système AdBlue réduit les NOx. S’il est vide, un message d’alerte apparaît et le véhicule peut refuser de démarrer.
+
+> Questions à poser :
+1. Avez-vous vu un message "Niveau AdBlue bas" ou "impossible de redémarrer bientôt" ?
+   - Oui → Remplir le réservoir AdBlue dès que possible.
+   - Non → Vérifier si le voyant moteur est aussi allumé.
+       - Si oui → Autre cause possible (EGR/FAP).
+
+2. Le véhicule refuse-t-il de démarrer ?
+   - Oui → Réservoir vide → Faire un appoint immédiatement.
+   - Non → Simple alerte → Prévoir appoint avant blocage.
+
+👉 Conclusion : si le problème persiste après appoint → Proposer "Trouver un garage partenaire".
+
+
+[Nettoyage Re-Fap]
+Le nettoyage FAP proposé par Re-Fap coûte entre 99€ et 149€.  
+Il évite un remplacement complet (2000€) et restaure les performances.
+
+> Questions à poser :
+1. Votre voyant FAP est-il allumé ?
+   - Oui → Nettoyage conseillé.
+   - Non → Nettoyage possible en prévention pour prolonger la durée de vie.
+
+2. Avez-vous déjà remplacé un FAP auparavant ?
+   - Oui → Indiquer que le nettoyage est 10x moins cher qu’un remplacement.
+   - Non → Souligner l’économie et l’efficacité.
+
+👉 Conclusion : Proposer "Trouver un garage partenaire".
+
+
 [INFOS FONCTIONNEMENT RE FAP]
-Ce qu'il y a sur le site :"
-Nettoyez votre FAP plutôt que de le remplacer : jusqu’à 10 fois moins cher, garanti 1 an.
-Grâce à notre procédé de nettoyage exclusif, nous éliminons 100 % des suies et redonnons à votre filtre à particules (FAP) ses performances d’origine constructeur.
+Résumé du fonctionnement Re-Fap :
 
-♻️ Re‑Fap prolonge la vie de votre FAP d’origine, pour une voiture plus fiable, plus économique… et plus écologique.
+Étape 1 : RDV dans un garage partenaire Re-Fap  
+→ Dépose du FAP  
+→ Envoi dans notre atelier  
 
+Étape 2 : Nettoyage exclusif Re-Fap en 48h  
+→ Élimine 100 % des suies  
+→ Restaure performances d’origine  
 
-En savoir plus sur notre solution FAP
+Étape 3 : Repose du FAP + réinitialisation calculateur moteur  
+→ Garantie 1 an  
+→ Résultat équivalent à un FAP neuf, mais jusqu’à 10 fois moins cher  
 
+👉 Conclusion : Orienter vers "Trouver un garage partenaire".
 
-Comment fonctionne le nettoyage de votre FAP avec Re‑Fap ?
-
-Étape 1 : Je prends rendez-vous dans un garage partenaire Re‑Fap
-Re‑Fap s’appuie sur un réseau de garages partenaires partout en France pour vous proposer une solution simple et économique, près de chez vous.
-
-Une fois votre demande envoyée, un garage de confiance vous contacte avec un devis transparent et avantageux, incluant :
-
-✅ La dépose du FAP
-✅ Le nettoyage en profondeur dans notre atelier Re‑Fap
-✅ La repose du FAP et la réinitialisation du calculateur moteur
-💡 Le montant du devis dépend du temps de main-d’œuvre spécifique à votre véhicule.
-En choisissant Re‑Fap, vous bénéficiez d’un nettoyage de FAP jusqu’à 10 fois moins cher qu’un remplacement, pour un résultat équivalent à l’origine.
-
-
-Étape 2 : Re‑Fap prend le relais
-Une fois le filtre à particules démonté, le garage l’expédie dans notre atelier Re‑Fap spécialisé grâce à notre logistique intégrée.
-
-Nous prenons tout en charge : enlèvement sécurisé, suivi de colis et traitement prioritaire dans nos locaux.
-
-
-Étape 3 : Nettoyage en 48h, remontage, c’est reparti !
-Dans notre atelier, votre FAP passe par un processus de nettoyage industriel haute performance, capable d’éliminer 100 % des suies sans endommager le filtre.
-
-⏱️ En moins de 48 heures, le filtre est nettoyé comme neuf, testé, puis renvoyé au garage pour être reposé et réinitialisé.
-
-Vous repartez avec un FAP nettoyé, performant et garanti 1 an  — sans avoir eu à changer de pièce."
 
 [PRENDRE RENDEZ VOUS GARAGE PARTENAIRE RDV RENDEZ-VOUS]
-
-Inviter l'user a appuyer sur le bouton "trouver un garage partenaire" juste à coté de cette fenetre de dialogue, qui le redirigera
+👉 Inviter l’utilisateur à appuyer sur le bouton **"Trouver un garage partenaire"** à côté de la fenêtre de dialogue.  
+Cela le redirigera directement vers la prise de rendez-vous.
 
