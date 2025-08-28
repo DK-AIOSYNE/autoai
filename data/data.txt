@@ -103,3 +103,4 @@ Résumé du fonctionnement Re-Fap :
 👉 Inviter l’utilisateur à appuyer sur le bouton **"Trouver un garage partenaire"** à côté de la fenêtre de dialogue.  
 Cela le redirigera directement vers la prise de rendez-vous.
 
+
