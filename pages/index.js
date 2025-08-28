@@ -48,11 +48,10 @@ export default function Home() {
       const data = await res.json();
       setLoading(false);
 
-      // On force les sauts de ligne simples
-      const cleanText = (data.reply || "Désolé, le service a reçu trop de messages en même temps, merci de renvoyer votre message :).")
-        .replace(/\n{2,}/g, '\n'); // supprime les sauts multiples
-
-      const botMsg = { from: 'bot', text: cleanText };
+      const botMsg = {
+        from: 'bot',
+        text: data.reply || "Désolé, le service a reçu trop de messages en même temps, merci de renvoyer votre message :).",
+      };
       setMessages((msgs) => [...msgs, botMsg]);
     } catch {
       setLoading(false);
@@ -77,15 +76,8 @@ export default function Home() {
           <div id="chat-window" className="chat-window">
             {messages.map((m, i) => (
               <div key={i} className={m.from === 'user' ? 'user-msg' : 'bot-msg'}>
-                <strong>{m.from === 'user' ? 'Moi' : 'AutoAI'}:</strong>{' '}
-                <ReactMarkdown
-                  components={{
-                    // On force les retours à la ligne simples
-                    br: ({ node, ...props }) => <br style={{ lineHeight: 1.2 }} {...props} />
-                  }}
-                >
-                  {m.text}
-                </ReactMarkdown>
+                <strong>{m.from === 'user' ? 'Moi' : 'AutoAI'}:</strong>
+                <ReactMarkdown>{m.text}</ReactMarkdown>
               </div>
             ))}
 
@@ -123,4 +115,3 @@ export default function Home() {
     </>
   );
 }
-
