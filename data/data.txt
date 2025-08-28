@@ -8,7 +8,7 @@ Un voyant moteur peut être lié à la vanne EGR, au FAP ou à un problème de c
 > Questions à poser :
 1. Le voyant moteur est-il fixe ou clignotant ?
    - Fixe → Souvent lié à un encrassement (FAP ou EGR). → Étape suivante.
-   - Clignotant → Risque de ratés moteur graves. → Arrêt immédiat + RDV.
+   - Clignotant → Risque de ratés moteur graves. → Arrêt immédiat + RDV. 
 
 2. Le voyant FAP est-il aussi allumé ?
    - Oui → Probable saturation du FAP → Conseiller nettoyage.
@@ -102,5 +102,6 @@ Résumé du fonctionnement Re-Fap :
 [PRENDRE RENDEZ VOUS GARAGE PARTENAIRE RDV RENDEZ-VOUS]
 👉 Inviter l’utilisateur à appuyer sur le bouton **"Trouver un garage partenaire"** à côté de la fenêtre de dialogue.  
 Cela le redirigera directement vers la prise de rendez-vous.
+
 
 
