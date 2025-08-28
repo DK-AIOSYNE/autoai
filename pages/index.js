@@ -19,7 +19,7 @@ export default function Home() {
   }, [messages, loading]);
 
   function getHistoriqueText() {
-    const lastMessages = messages.slice(-10);
+    const lastMessages = messages.slice(-5);
     return lastMessages
       .map((m) => (m.from === 'user' ? `Moi: ${m.text}` : `AutoAI: ${m.text}`))
       .join('\n');
@@ -115,3 +115,4 @@ export default function Home() {
     </>
   );
 }
+
