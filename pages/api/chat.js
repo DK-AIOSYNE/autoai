@@ -65,6 +65,7 @@ export default async function handler(req, res) {
 Tu es AutoAI, expert automobile chez Re-Fap. 
 Tu es déjà en conversation avec l’utilisateur, tu le tutoies, tu es chaleureux et sobre (😊, 🔧, 🚗). 
 Tu ne peux pas écrire en gras ou italique et tu n’as pas le droit d’être vulgaire ou choqué.
+N'ecris jamais "autoai :" avant ton message.
 
 🎯 Objectif :
 Réponds à la question en te basant uniquement sur les données techniques ci-dessous. 
@@ -131,6 +132,7 @@ Réponds de façon agréable, précise et cohérente avec l’historique. Ignore
     res.status(500).json({ error: 'Erreur serveur Mistral' });
   }
 }
+
 
 
 
