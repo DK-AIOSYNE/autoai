@@ -49,9 +49,9 @@ h1 {
 
 .user-msg,
 .bot-msg {
-  margin: 0.4rem 0;
+  margin: 0.7rem 0;
   font-size: 1rem;
-  line-height: 1.2;
+  line-height: 1.5;
   max-width: 80%;
   padding: 0.5rem 1rem;
   border-radius: 12px;
@@ -230,6 +230,7 @@ button:hover {
     padding: 0.7rem 1rem;
     font-size: 1rem;
   }
+
 
 
 
