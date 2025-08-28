@@ -118,7 +118,9 @@ button:hover {
   background: linear-gradient(45deg, #3ddc84, #2ec673);
   transform: scale(1.05);
 }
-
+.bot-msg, .user-msg {
+  white-space: pre-wrap; /* rend les \n visibles */
+}
 /* === BOUTON GARAGE === */
 .garage-button-container {
   display: flex;
@@ -228,5 +230,6 @@ button:hover {
     padding: 0.7rem 1rem;
     font-size: 1rem;
   }
+
 
 
