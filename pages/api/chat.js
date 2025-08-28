@@ -104,7 +104,7 @@ Réponds de façon agréable, précise et cohérente avec l’historique. Ignore
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        model: "mistral-large-latest",
+        model: "mistral-medium-latest",
         messages: [
           { role: "user", content: prompt }
         ],
@@ -131,6 +131,7 @@ Réponds de façon agréable, précise et cohérente avec l’historique. Ignore
     res.status(500).json({ error: 'Erreur serveur Mistral' });
   }
 }
+
 
 
 
