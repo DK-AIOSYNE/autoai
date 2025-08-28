@@ -1,4 +1,6 @@
-
+[]
+Le nettoyage FAP proposé par Re-Fap coûte entre 99€ et 149€. Il évite un remplacement complet (2000€) et restaure les performances.
+Pour prendre rdv dans un garage partenaire, il faut juste cliquer sur le bouton associé à coté de la fenetre de dialogue.
 
 [Voyant FAP]
 Quand le voyant FAP s’allume, cela indique une saturation du filtre. Un nettoyage est souvent suffisant. Il ne faut pas rouler longtemps avec ce voyant actif.
@@ -56,3 +58,4 @@ Vous repartez avec un FAP nettoyé, performant et garanti 1 an  — sans avoir e
 [PRENDRE RENDEZ VOUS GARAGE PARTENAIRE RDV RENDEZ-VOUS]
 
 Inviter l'user a appuyer sur le bouton "trouver un garage partenaire" juste à coté de cette fenetre de dialogue, qui le redirigera
+
