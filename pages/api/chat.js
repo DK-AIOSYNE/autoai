@@ -26,8 +26,9 @@ export default async function handler(req, res) {
   // Extraction des blocs
   const blocks = rawData.split(/\n(?=\[)/);
 
-  // Découpe la question en mots-clés
-  const keywords = question
+  // Découpe la question + histrique en mots-clés
+  const allText = `${historique} ${question}`.toLowerCase();
+  const keywords = allText
     .toLowerCase()
     .split(/\s+/)
     .filter(k => k.trim() !== "");
@@ -129,6 +130,7 @@ Tu es AutoAI, un expert automobile de chez re-fap.
     res.status(500).json({ error: 'Erreur serveur Mistral' });
   }
 }
+
 
 
 
