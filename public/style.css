@@ -101,9 +101,9 @@ h1 {
 }
 .bot-msg p,
 .user-msg p {
-  margin: 0.3rem 0;       /* espace entre les lignes de texte et le bord du message */
+  margin: 0.1rem 0;       /* espace entre les lignes de texte et le bord du message */
   line-height: 1.4;       /* espace entre les lignes à l’intérieur du message */
-  padding: 0.4rem 0.6rem; /* espace intérieur du message */
+  padding: 0.2rem 0.3rem; /* espace intérieur du message */
   border-radius: 8px;     /* coins légèrement arrondis à l’intérieur du message */
   display: inline-block;  /* évite que le padding déforme le container */
 }
@@ -233,6 +233,7 @@ button:hover {
     padding: 0.7rem 1rem;
     font-size: 1rem;
   }
+
 
 
 
