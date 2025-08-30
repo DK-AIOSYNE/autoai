@@ -16,7 +16,8 @@ Un voyant moteur peut être lié à la vanne EGR, au FAP ou à un problème de c
        - Oui → Probable vanne EGR encrassée. → RDV conseillé.
        - Non → Cause incertaine → Diagnostic électronique.
 
-👉 SI PB FAP, demander si l'utilisateur sait demonter son fap. 
+👉 CONCLUSION APRES AVOIR REP AUX QUESTIONS :
+SI PB FAP, demander si l'utilisateur sait demonter son fap. 
 SI OUI : IL doit poser son fap dans le carter cash le plus proche de chez lui en cliquant sur le bouton "Trouver un Carter cash" a coté de la fenetre de dialogue
 SI NON : il doit trouver un garage partenaire re fap en cliquant sur "Trouver un garage partenaire re fap" a coté de la fenetre de dialogue
 SI PAS PB FAP, Orienter vers carter cash en cliquant sur le bouton a coté de la fenetre de dialogue
@@ -34,7 +35,8 @@ Quand le voyant FAP s’allume, cela indique une saturation du filtre. Un nettoy
    - Oui → Saturation avancée → RDV nécessaire.
    - Non → Nettoyage recommandé pour éviter aggravation.
 
-👉 Conclusion :👉 SI PB FAP, demander si l'utilisateur sait demonter son fap. 
+👉 CONCLUSION APRES AVOIR REP AUX QUESTIONS :
+👉 SI PB FAP, demander si l'utilisateur sait demonter son fap. 
 SI OUI : IL doit poser son fap dans le carter cash le plus proche de chez lui en cliquant sur le bouton "Trouver un Carter cash" a coté de la fenetre de dialogue
 SI NON : il doit trouver un garage partenaire re fap en cliquant sur "Trouver un garage partenaire re fap" a coté de la fenetre de dialogue
 SI PAS PB FAP, Orienter vers carter cash en cliquant sur le bouton a coté de la fenetre de dialogue
@@ -52,7 +54,8 @@ Une vanne EGR encrassée peut provoquer des ratés moteur, une perte de puissanc
    - Oui → Diagnostic obligatoire.
    - Non → Si perte de puissance → Nettoyage conseillé.
 
-👉 Conclusion :SI PB FAP, demander si l'utilisateur sait demonter son fap. 
+👉 CONCLUSION APRES AVOIR REP AUX QUESTIONS :
+SI PB FAP, demander si l'utilisateur sait demonter son fap. 
 SI OUI : IL doit poser son fap dans le carter cash le plus proche de chez lui en cliquant sur le bouton "Trouver un Carter cash" a coté de la fenetre de dialogue
 SI NON : il doit trouver un garage partenaire re fap en cliquant sur "Trouver un garage partenaire re fap" a coté de la fenetre de dialogue
 SI PAS PB FAP, Orienter vers carter cash en cliquant sur le bouton a coté de la fenetre de dialogue
@@ -71,7 +74,8 @@ Le système AdBlue réduit les NOx. S’il est vide, un message d’alerte appar
    - Oui → Réservoir vide → Faire un appoint immédiatement.
    - Non → Simple alerte → Prévoir appoint avant blocage.
 
-👉 Conclusion : si le problème persiste après appoint → 👉 SI PB FAP, demander si l'utilisateur sait demonter son fap. 
+👉 CONCLUSION APRES AVOIR REP AUX QUESTIONS :
+si le problème persiste après appoint → 👉 SI PB FAP, demander si l'utilisateur sait demonter son fap. 
 SI OUI : IL doit poser son fap dans le carter cash le plus proche de chez lui en cliquant sur le bouton "Trouver un Carter cash" a coté de la fenetre de dialogue
 SI NON : il doit trouver un garage partenaire re fap en cliquant sur "Trouver un garage partenaire re fap" a coté de la fenetre de dialogue
 SI PAS PB FAP, Orienter vers carter cash en cliquant sur le bouton a coté de la fenetre de dialogue
@@ -90,7 +94,8 @@ Il évite un remplacement complet (2000€) et restaure les performances.
    - Oui → Indiquer que le nettoyage est 10x moins cher qu’un remplacement.
    - Non → Souligner l’économie et l’efficacité.
 
-👉 Conclusion : 👉 SI PB FAP, demander si l'utilisateur sait demonter son fap. 
+👉 CONCLUSION APRES AVOIR REP AUX QUESTIONS :
+👉 SI PB FAP, demander si l'utilisateur sait demonter son fap. 
 SI OUI : IL doit poser son fap dans le carter cash le plus proche de chez lui en cliquant sur le bouton "Trouver un Carter cash" a coté de la fenetre de dialogue
 SI NON : il doit trouver un garage partenaire re fap en cliquant sur "Trouver un garage partenaire re fap" a coté de la fenetre de dialogue
 SI PAS PB FAP, Orienter vers carter cash en cliquant sur le bouton a coté de la fenetre de dialogue
@@ -110,7 +115,8 @@ Résumé du fonctionnement Re-Fap :
 → Garantie 1 an  
 → Résultat équivalent à un FAP neuf, mais jusqu’à 10 fois moins cher  
 
-👉 Conclusion : 👉 SI PB FAP, demander si l'utilisateur sait demonter son fap. 
+👉 CONCLUSION APRES AVOIR REP AUX QUESTIONS :
+👉 SI PB FAP, demander si l'utilisateur sait demonter son fap. 
 SI OUI : IL doit poser son fap dans le carter cash le plus proche de chez lui en cliquant sur le bouton "Trouver un Carter cash" a coté de la fenetre de dialogue
 SI NON : il doit trouver un garage partenaire re fap en cliquant sur "Trouver un garage partenaire re fap" a coté de la fenetre de dialogue
 SI PAS PB FAP, Orienter vers carter cash en cliquant sur le bouton a coté de la fenetre de dialogue
@@ -119,6 +125,7 @@ SI PAS PB FAP, Orienter vers carter cash en cliquant sur le bouton a coté de la
 [PRENDRE RENDEZ VOUS GARAGE PARTENAIRE RDV RENDEZ-VOUS]
 👉 Inviter l’utilisateur à appuyer sur le bouton **"Trouver un garage partenaire"** à côté de la fenêtre de dialogue.  
 Cela le redirigera directement vers la prise de rendez-vous.
+
 
 
 
