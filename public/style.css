@@ -95,7 +95,10 @@ h1 {
   border-color: #3ddc84;
   box-shadow: 0 0 5px rgba(61, 220, 132, 0.4);
 }
-
+.bot-msg, .user-msg {
+  white-space: pre-wrap;  /* garde les sauts de lignes */
+  word-break: break-word; /* évite le débordement */
+}
 button {
   padding: 0.6rem 1.2rem;
   background: linear-gradient(45deg, #4eea9b, #3ddc84);
@@ -222,6 +225,7 @@ button:hover {
     padding: 0.7rem 1rem;
     font-size: 1rem;
   }
+
 
 
 
