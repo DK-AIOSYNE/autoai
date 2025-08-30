@@ -160,7 +160,7 @@ button:hover {
   display: inline-block;
   text-align: center;
   margin-top: 0.5rem; /* petit espace avec le bouton au-dessus */
-  max-width: none;
+  max-width: 160px;
 }
 
 .carter-button:hover {
@@ -255,6 +255,7 @@ button:hover {
     padding: 0.7rem 1rem;
     font-size: 1rem;
   }
+
 
 
 
