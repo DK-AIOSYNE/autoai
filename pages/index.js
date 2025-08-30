@@ -97,7 +97,7 @@ export default function Home() {
             <a href="https://re-fap.fr/trouver_garage_partenaire/" className="garage-button">
               Trouver un garage<br />partenaire Re-Fap🔧
             </a>
-            <a href="https://auto.refap.fr" className="carter-button">
+            <a href="https://auto.re-fap.fr" className="carter-button">
             Trouver un Carter Cash 🛠️
             </a>
           </div>
@@ -118,6 +118,7 @@ export default function Home() {
     </>
   );
 }
+
 
 
 
