@@ -106,7 +106,8 @@ Voici les données disponibles :
 ${contextText}
 
 Répond en priorité à partir des données, de manière agréable à lire. Limite le texte si ce n’est pas un problème FAP et dirige directement vers Carter Cash.
-Si c’est un problème FAP, applique la logique de question sur le démontage avant d’indiquer le bouton approprié (Carter Cash ou garage partenaire).`;
+Si c’est un problème FAP, applique la logique de question sur le démontage avant d’indiquer le bouton approprié (Carter Cash ou garage partenaire).
+`;
 
 
   try {
@@ -144,6 +145,7 @@ Si c’est un problème FAP, applique la logique de question sur le démontage a
     res.status(500).json({ error: 'Erreur serveur Mistral' });
   }
 }
+
 
 
 
