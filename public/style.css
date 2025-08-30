@@ -99,6 +99,14 @@ h1 {
   white-space: pre-wrap;  /* garde les sauts de lignes */
   word-break: break-word; /* évite le débordement */
 }
+.bot-msg p,
+.user-msg p {
+  margin: 0.3rem 0;       /* espace entre les lignes de texte et le bord du message */
+  line-height: 1.4;       /* espace entre les lignes à l’intérieur du message */
+  padding: 0.4rem 0.6rem; /* espace intérieur du message */
+  border-radius: 8px;     /* coins légèrement arrondis à l’intérieur du message */
+  display: inline-block;  /* évite que le padding déforme le container */
+}
 button {
   padding: 0.6rem 1.2rem;
   background: linear-gradient(45deg, #4eea9b, #3ddc84);
@@ -225,6 +233,7 @@ button:hover {
     padding: 0.7rem 1rem;
     font-size: 1rem;
   }
+
 
 
 
