@@ -1,14 +1,13 @@
 import { useState, useRef, useEffect } from 'react';
 import Head from 'next/head';
 import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
 
 export default function Home() {
   const [messages, setMessages] = useState([
     {
       from: 'bot',
       text:
-        "Bonjour 👋! Je suis **AutoAI**, une intelligence artificielle conçue par les développeurs Re-Fap pour t'aider à diagnostiquer gratuitement des éventuels problèmes sur ton filtre à particules, et à trouver des solutions.\n\nAs-tu des questions ?😄"
+        "Bonjour 👋! Je suis **AutoAI**, une intelligence artificielle conçue par les développeurs Re-Fap pour t'aider à diagnostiquer gratuitement des éventuels problèmes sur ton filtre à particules, et à trouver des solutions. As-tu des questions ?😄"
     },
   ]);
   const [input, setInput] = useState('');
@@ -77,21 +76,8 @@ export default function Home() {
           <div id="chat-window" className="chat-window">
             {messages.map((m, i) => (
               <div key={i} className={m.from === 'user' ? 'user-msg' : 'bot-msg'}>
-                <strong>{m.from === 'user' ? 'Moi' : 'AutoAI'}:</strong>{" "}
-                <ReactMarkdown
-                  remarkPlugins={[remarkGfm]}
-                  components={{
-                    p: ({ node, ...props }) => (
-                      <p style={{ margin: 0, lineHeight: "1.4" }} {...props} />
-                    ),
-                    strong: ({ node, ...props }) => (
-                      <strong style={{ fontWeight: "600" }} {...props} />
-                    ),
-                    br: () => <br style={{ lineHeight: "1.2" }} />,
-                  }}
-                >
-                  {m.text}
-                </ReactMarkdown>
+                <strong>{m.from === 'user' ? 'Moi' : 'AutoAI'}:</strong>
+                <ReactMarkdown>{m.text}</ReactMarkdown>
               </div>
             ))}
 
@@ -129,4 +115,3 @@ export default function Home() {
     </>
   );
 }
-
