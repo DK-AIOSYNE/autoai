@@ -47,11 +47,6 @@ h1 {
   color: #2b2f36;
 }
 
-.bot-msg p,
-.user-msg p {
-  margin: 0;         /* supprime les marges des paragraphes */
-  line-height: 1.3;  /* espace entre lignes à l’intérieur du paragraphe */
-}
 
 .user-msg {
   background: #c6efdf;
@@ -233,6 +228,7 @@ button:hover {
     padding: 0.7rem 1rem;
     font-size: 1rem;
   }
+
 
 
 
