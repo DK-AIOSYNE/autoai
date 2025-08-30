@@ -96,11 +96,11 @@ Tu n'as pas le droit d’être vulgaire.
 -attention aux mots clés,ex: si la question contient "Nettoyage Fap", mais qu'elle parle du produit utilisé, meme si tu as des données tu n'as pas la réponse.
 
 🔒 Ton rôle : expert auto Re-Fap, capable de diagnostiquer FAP et guider sur d’autres problèmes vers Carter Cash.
-
-`${historique}`
+Historique des messages de la conversation :
+${historique}
 
 Voici la question de l’utilisateur :  
-`${question}`
+${question}
 
 Voici les données disponibles :  
 ${contextText}
@@ -145,6 +145,7 @@ Si c’est un problème FAP, applique la logique de question sur le démontage a
     res.status(500).json({ error: 'Erreur serveur Mistral' });
   }
 }
+
 
 
 
