@@ -239,7 +239,6 @@ button:hover {
   }
 }
 .carter-button {
-    width: 100%;
     max-width: 280px;
     padding: 12px 24px;
     font-size: 1rem;
@@ -255,6 +254,7 @@ button:hover {
     padding: 0.7rem 1rem;
     font-size: 1rem;
   }
+
 
 
 
