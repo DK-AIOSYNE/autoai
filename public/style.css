@@ -150,7 +150,7 @@ button:hover {
 .carter-button {
   background: linear-gradient(135deg, #ff4d4d, #0066ff); /* rouge -> bleu */
   color: white;
-  padding: 0.9rem 1.6rem;
+  padding: 0.9rem 1rem;
   border-radius: 12px;
   font-weight: bold;
   font-size: 1rem;
@@ -255,6 +255,7 @@ button:hover {
     padding: 0.7rem 1rem;
     font-size: 1rem;
   }
+
 
 
 
