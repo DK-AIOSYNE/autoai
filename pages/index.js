@@ -84,7 +84,7 @@ export default function Home() {
             {messages.map((m, i) => (
               <div key={i} className={m.from === 'user' ? 'user-msg' : 'bot-msg'}>
                 <strong>{m.from === 'user' ? 'Moi' : 'AutoAI'}:</strong>
-                <ReactMarkdown>{m.text.replace(/\n{2,}/g, '\n')}</ReactMarkdown>
+                <ReactMarkdown skipHtml>{m.text.replace(/\n{2,}/g, '\n')}</ReactMarkdown>
               </div>
             ))}
 
@@ -130,3 +130,4 @@ export default function Home() {
     </>
   );
 }
+
