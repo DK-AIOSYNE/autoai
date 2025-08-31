@@ -70,7 +70,7 @@ export default function Home() {
       setLoading(false);
       setMessages((msgs) => [
         ...msgs,
-        { from: 'bot', text: "Désolé, il y a eu une erreur réseau, merci d'actualiser la page :)." },
+        { from: 'bot', text: "Désolé, il y a eu une erreur réseau, merci de renvoyer votre message :)." },
       ]);
     }
   }
@@ -144,3 +144,4 @@ export default function Home() {
     </>
   );
 }
+
