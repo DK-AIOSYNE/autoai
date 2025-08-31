@@ -139,13 +139,13 @@ export default function Home() {
             onChange={(e) => {
               const val = e.target.value;
               setInput(val);
-              setError(val.length > 1000 ? '⚠️ Ton message ne peut pas dépasser 1000 caractères.' : '');
+              setError(val.length > 1000 ? '⚠️ Ton message ne peut pas dépasser 600 caractères.' : '');
             }}
             autoComplete="off"
             id="user-input"
             disabled={blocked}
           />
-          <button type="submit" disabled={blocked || input.length > 1000}>
+          <button type="submit" disabled={blocked || input.length > 600}>
             Envoyer
           </button>
         </form>
@@ -159,3 +159,4 @@ export default function Home() {
     </>
   );
 }
+
