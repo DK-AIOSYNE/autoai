@@ -56,7 +56,7 @@ export default function Home() {
         if (res.status === 429) {
           setMessages((msgs) => [
             ...msgs,
-            { from: 'bot', text: "⚠️ Le service est temporairement saturé, merci de réessayer plus tard." },
+            { from: 'bot', text: "⚠️ Le service est temporairement saturé, merci de renvoyer votre message." },
           ]);
         } else {
           setMessages((msgs) => [
@@ -141,6 +141,7 @@ export default function Home() {
                 setError('');
               } else {
                 setError('⚠️ Ton message ne peut pas dépasser 1000 caractères.');
+                setBlocked(true)
               }
             }}
             autoComplete="off"
@@ -158,3 +159,4 @@ export default function Home() {
     </>
   );
 }
+
