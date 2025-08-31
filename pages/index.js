@@ -30,21 +30,16 @@ export default function Home() {
   async function handleSubmit(e) {
     e.preventDefault();
 
-    // 1) Vérifier limite de messages utilisateur
+    // Vérifier limite de messages utilisateur
     const userMessagesCount = messages.filter(m => m.from === 'user').length;
     if (userMessagesCount >= 10) {
       setBlocked(true);
-      setError("🔧 Tu as déjà échangé 10 messages avec moi sur ce sujet ! Pour éviter les conversations trop longues et rester efficace, la session s’arrête ici. Tu peux relancer une nouvelle discussion à tout moment 🚀.");
+      setError("🔧 Tu as déjà échangé 10 messages avec moi sur ce sujet ! Pour éviter les conversations trop longues, la session s’arrête ici. Tu peux relancer une nouvelle discussion à tout moment 🚀.");
       return;
     }
 
-    // 2) Vérifier longueur du message
     const trimmedInput = input.trim();
     if (!trimmedInput) return;
-    if (trimmedInput.length > 1000) {
-      setError('⚠️ Ton message ne peut pas dépasser 1000 caractères.');
-      return;
-    }
 
     const userMsg = { from: 'user', text: trimmedInput };
     setMessages((msgs) => [...msgs, userMsg]);
@@ -67,7 +62,6 @@ export default function Home() {
       setLoading(false);
 
       if (!res.ok) {
-        // Gestion d'erreur spécifique
         if (res.status === 429) {
           setMessages((msgs) => [
             ...msgs,
@@ -120,9 +114,7 @@ export default function Home() {
             {loading && (
               <div className="bot-msg typing-indicator">
                 <strong>AutoAI:</strong>
-                <span className="dots">
-                  <span>.</span><span>.</span><span>.</span>
-                </span>
+                <span className="dots"><span>.</span><span>.</span><span>.</span></span>
               </div>
             )}
 
@@ -146,19 +138,18 @@ export default function Home() {
             value={input}
             onChange={(e) => {
               const val = e.target.value;
-              if (val.length <= 1000) {
-                setInput(val);
-                setError('');
-              } else {
-                setError('⚠️ Ton message ne peut pas dépasser 1000 caractères.');
-              }
+              setInput(val);
+              setError(val.length > 1000 ? '⚠️ Ton message ne peut pas dépasser 1000 caractères.' : '');
             }}
             autoComplete="off"
             id="user-input"
             disabled={blocked}
           />
-          <button type="submit" disabled={blocked || input.length > 1000}>Envoyer</button>
+          <button type="submit" disabled={blocked || input.length > 1000}>
+            Envoyer
+          </button>
         </form>
+
         {error && <p className="error-msg">{error}</p>}
       </main>
 
@@ -168,4 +159,3 @@ export default function Home() {
     </>
   );
 }
-
