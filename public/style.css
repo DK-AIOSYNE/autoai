@@ -23,7 +23,7 @@ body {
   margin: 2rem auto;
   background: #f1f5f4;
   border-radius: 16px;
-  padding: 2rem;
+  padding: 1rem;
   box-shadow: 0 0 20px rgba(61, 220, 132, 0.2);
   display: flex;
   flex-direction: column;
@@ -265,6 +265,7 @@ button:hover {
     padding: 0.7rem 1rem;
     font-size: 1rem;
   }
+
 
 
 
