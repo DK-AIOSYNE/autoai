@@ -7,7 +7,7 @@ export default function Home() {
     {
       from: 'bot',
       text:
-        "Bonjour 👋! Je suis **AutoAI**, une intelligence artificielle conçue par les développeurs Re-Fap pour t'aider à diagnostiquer gratuitement des éventuels problèmes sur ton filtre à particules, et à trouver des solutions. As-tu des questions ?😄"
+        "Bonjour 👋! Je suis **AutoAI**, une intelligence artificielle conçue par les développeurs Re-Fap pour t'aider à diagnostiquer gratuitement des éventuels problèmes sur ton filtre à particules ou ta voiture, et à trouver des solutions. As-tu des questions ?😄"
     },
   ]);
   const [input, setInput] = useState('');
@@ -121,6 +121,7 @@ export default function Home() {
     </>
   );
 }
+
 
 
 
