@@ -29,22 +29,37 @@ export default function Home() {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    if (!input.trim() || blocked || input.trim().length > 1000) return;
 
-    const userMsg = { from: 'user', text: input.trim() };
+    // 1) Vérifier limite de messages utilisateur
+    const userMessagesCount = messages.filter(m => m.from === 'user').length;
+    if (userMessagesCount >= 10) {
+      setBlocked(true);
+      setError("🔧 Tu as déjà échangé 10 messages avec moi sur ce sujet !");
+      return;
+    }
+
+    // 2) Vérifier longueur du message
+    const trimmedInput = input.trim();
+    if (!trimmedInput) return;
+    if (trimmedInput.length > 1000) {
+      setError('⚠️ Ton message ne peut pas dépasser 1000 caractères.');
+      return;
+    }
+
+    const userMsg = { from: 'user', text: trimmedInput };
     setMessages((msgs) => [...msgs, userMsg]);
     setInput('');
     setLoading(true);
     setError('');
 
-    const historiqueText = getHistoriqueText() + `\nMoi: ${input.trim()}`;
+    const historiqueText = getHistoriqueText() + `\nMoi: ${trimmedInput}`;
 
     try {
       const res = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          question: input.trim(),
+          question: trimmedInput,
           historique: historiqueText,
         }),
       });
@@ -52,11 +67,11 @@ export default function Home() {
       setLoading(false);
 
       if (!res.ok) {
-        // Gestion d'erreur spécifique (ex: 429 service tier exceeded)
+        // Gestion d'erreur spécifique
         if (res.status === 429) {
           setMessages((msgs) => [
             ...msgs,
-            { from: 'bot', text: "⚠️ Le service est temporairement saturé, merci de renvoyer votre message." },
+            { from: 'bot', text: "⚠️ Le service est temporairement saturé, merci de réessayer plus tard." },
           ]);
         } else {
           setMessages((msgs) => [
@@ -68,19 +83,11 @@ export default function Home() {
       }
 
       const data = await res.json();
-
       const botMsg = {
         from: 'bot',
         text: data.reply || "Désolé, le service a reçu trop de messages en même temps, merci de renvoyer votre message :).",
       };
       setMessages((msgs) => [...msgs, botMsg]);
-
-      // Bloquer l'input si la limite de 10 messages est atteinte
-      if (messages.length >= 10) {
-           setBlocked(true);
-          setError("🔧 Tu as déjà échangé 10 messages avec moi sur ce sujet !");
-          return;
-      }
 
     } catch {
       setLoading(false);
@@ -138,8 +145,9 @@ export default function Home() {
             placeholder="Écris ta question ici..."
             value={input}
             onChange={(e) => {
-              if (e.target.value.length <= 1000) {
-                setInput(e.target.value);
+              const val = e.target.value;
+              if (val.length <= 1000) {
+                setInput(val);
                 setError('');
               } else {
                 setError('⚠️ Ton message ne peut pas dépasser 1000 caractères.');
@@ -147,7 +155,7 @@ export default function Home() {
             }}
             autoComplete="off"
             id="user-input"
-            disabled={blocked || input.length > 1000}
+            disabled={blocked}
           />
           <button type="submit" disabled={blocked || input.length > 1000}>Envoyer</button>
         </form>
@@ -160,6 +168,3 @@ export default function Home() {
     </>
   );
 }
-
-
-
