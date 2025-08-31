@@ -76,8 +76,10 @@ export default function Home() {
       setMessages((msgs) => [...msgs, botMsg]);
 
       // Bloquer l'input si la limite de 10 messages est atteinte
-      if (data.reply.includes("Tu as déjà échangé 10 messages")) {
-        setBlocked(true);
+      if (messages.length >= 10) {
+           setBlocked(true);
+          setError("🔧 Tu as déjà échangé 10 messages avec moi sur ce sujet !");
+          return;
       }
 
     } catch {
@@ -158,5 +160,6 @@ export default function Home() {
     </>
   );
 }
+
 
 
