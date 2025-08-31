@@ -141,7 +141,6 @@ export default function Home() {
                 setError('');
               } else {
                 setError('⚠️ Ton message ne peut pas dépasser 1000 caractères.');
-                setBlocked(true)
               }
             }}
             autoComplete="off"
@@ -159,4 +158,5 @@ export default function Home() {
     </>
   );
 }
+
 
