@@ -139,7 +139,7 @@ export default function Home() {
             onChange={(e) => {
               const val = e.target.value;
               setInput(val);
-              setError(val.length > 1000 ? '⚠️ Ton message ne peut pas dépasser 600 caractères.' : '');
+              setError(val.length > 600 ? '⚠️ Ton message ne peut pas dépasser 600 caractères.' : '');
             }}
             autoComplete="off"
             id="user-input"
@@ -159,4 +159,5 @@ export default function Home() {
     </>
   );
 }
+
 
