@@ -29,12 +29,7 @@ export default function Home() {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    if (!input.trim() || blocked) return;
-
-    if (input.trim().length > 1000) {
-      setError('⚠️ Ton message ne peut pas dépasser 1000 caractères.');
-      return;
-    }
+    if (!input.trim() || blocked || input.trim().length > 1000) return;
 
     const userMsg = { from: 'user', text: input.trim() };
     setMessages((msgs) => [...msgs, userMsg]);
@@ -54,9 +49,10 @@ export default function Home() {
         }),
       });
 
+      setLoading(false);
+
       if (!res.ok) {
         // Gestion d'erreur spécifique (ex: 429 service tier exceeded)
-        setLoading(false);
         if (res.status === 429) {
           setMessages((msgs) => [
             ...msgs,
@@ -72,7 +68,6 @@ export default function Home() {
       }
 
       const data = await res.json();
-      setLoading(false);
 
       const botMsg = {
         from: 'bot',
@@ -150,9 +145,9 @@ export default function Home() {
             }}
             autoComplete="off"
             id="user-input"
-            disabled={blocked}
+            disabled={blocked || input.length > 1000}
           />
-          <button type="submit" disabled={blocked}>Envoyer</button>
+          <button type="submit" disabled={blocked || input.length > 1000}>Envoyer</button>
         </form>
         {error && <p className="error-msg">{error}</p>}
       </main>
