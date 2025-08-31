@@ -12,7 +12,8 @@ export default function Home() {
   ]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
-  const [blocked, setBlocked] = useState(false); // <-- état pour bloquer l'input
+  const [blocked, setBlocked] = useState(false);
+  const [error, setError] = useState('');
   const chatEndRef = useRef();
 
   useEffect(() => {
@@ -28,12 +29,18 @@ export default function Home() {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    if (!input.trim() || blocked) return; // <-- empêche d'envoyer si blocked
+    if (!input.trim() || blocked) return;
+
+    if (input.length > 1000) {
+      setError('⚠️ Ton message ne peut pas dépasser 1000 caractères.');
+      return;
+    }
 
     const userMsg = { from: 'user', text: input.trim() };
     setMessages((msgs) => [...msgs, userMsg]);
     setInput('');
     setLoading(true);
+    setError('');
 
     const historiqueText = getHistoriqueText() + `\nMoi: ${input.trim()}`;
 
@@ -55,7 +62,6 @@ export default function Home() {
       };
       setMessages((msgs) => [...msgs, botMsg]);
 
-      // <-- si le bot indique que la limite est atteinte, bloquer l'input
       if (data.reply.includes("Tu as déjà échangé 10 messages")) {
         setBlocked(true);
       }
@@ -118,10 +124,11 @@ export default function Home() {
             onChange={(e) => setInput(e.target.value)}
             autoComplete="off"
             id="user-input"
-            disabled={blocked} // <-- input bloqué si limite atteinte
+            disabled={blocked}
           />
-          <button type="submit" disabled={blocked}>Envoyer</button> {/* <-- bouton bloqué */}
+          <button type="submit" disabled={blocked}>Envoyer</button>
         </form>
+        {error && <p className="error-msg">{error}</p>}
       </main>
 
       <footer className="footer">
@@ -130,4 +137,3 @@ export default function Home() {
     </>
   );
 }
-
