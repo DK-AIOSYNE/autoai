@@ -34,7 +34,7 @@ export default function Home() {
     const userMessagesCount = messages.filter(m => m.from === 'user').length;
     if (userMessagesCount >= 10) {
       setBlocked(true);
-      setError("🔧 Tu as déjà échangé 10 messages avec moi sur ce sujet !");
+      setError("🔧 Tu as déjà échangé 10 messages avec moi sur ce sujet ! Pour éviter les conversations trop longues et rester efficace, la session s’arrête ici. Tu peux relancer une nouvelle discussion à tout moment 🚀.");
       return;
     }
 
@@ -168,3 +168,4 @@ export default function Home() {
     </>
   );
 }
+
