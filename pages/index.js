@@ -115,9 +115,13 @@ export default function Home() {
           <button type="submit">Envoyer</button>
         </form>
       </main>
+        <footer className="footer">
+        <p>⚠️ AutoAI peut faire des erreurs, envisagez de vérifier les informations importantes.</p>
+      </footer>
     </>
   );
 }
+
 
 
 
