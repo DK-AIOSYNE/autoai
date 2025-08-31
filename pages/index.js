@@ -53,6 +53,24 @@ export default function Home() {
           historique: historiqueText,
         }),
       });
+
+      if (!res.ok) {
+        // Gestion d'erreur spécifique (ex: 429 service tier exceeded)
+        setLoading(false);
+        if (res.status === 429) {
+          setMessages((msgs) => [
+            ...msgs,
+            { from: 'bot', text: "⚠️ Le service est temporairement saturé, merci de réessayer plus tard." },
+          ]);
+        } else {
+          setMessages((msgs) => [
+            ...msgs,
+            { from: 'bot', text: `Erreur serveur ${res.status}` },
+          ]);
+        }
+        return;
+      }
+
       const data = await res.json();
       setLoading(false);
 
@@ -62,6 +80,7 @@ export default function Home() {
       };
       setMessages((msgs) => [...msgs, botMsg]);
 
+      // Bloquer l'input si la limite de 10 messages est atteinte
       if (data.reply.includes("Tu as déjà échangé 10 messages")) {
         setBlocked(true);
       }
@@ -70,7 +89,7 @@ export default function Home() {
       setLoading(false);
       setMessages((msgs) => [
         ...msgs,
-        { from: 'bot', text: "Désolé, il y a eu une erreur réseau, merci de renvoyer votre message :)." },
+        { from: 'bot', text: "Désolé, il y a eu une erreur réseau, merci d'actualiser la page :)." },
       ]);
     }
   }
@@ -144,5 +163,3 @@ export default function Home() {
     </>
   );
 }
-
-
