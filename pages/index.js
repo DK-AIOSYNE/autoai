@@ -12,6 +12,7 @@ export default function Home() {
   ]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
+  const [blocked, setBlocked] = useState(false); // <-- état pour bloquer l'input
   const chatEndRef = useRef();
 
   useEffect(() => {
@@ -27,7 +28,7 @@ export default function Home() {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    if (!input.trim()) return;
+    if (!input.trim() || blocked) return; // <-- empêche d'envoyer si blocked
 
     const userMsg = { from: 'user', text: input.trim() };
     setMessages((msgs) => [...msgs, userMsg]);
@@ -53,6 +54,12 @@ export default function Home() {
         text: data.reply || "Désolé, le service a reçu trop de messages en même temps, merci de renvoyer votre message :).",
       };
       setMessages((msgs) => [...msgs, botMsg]);
+
+      // <-- si le bot indique que la limite est atteinte, bloquer l'input
+      if (data.reply.includes("Tu as déjà échangé 10 messages")) {
+        setBlocked(true);
+      }
+
     } catch {
       setLoading(false);
       setMessages((msgs) => [
@@ -98,7 +105,7 @@ export default function Home() {
               Trouver un garage<br />partenaire Re-Fap🔧
             </a>
             <a href="https://auto.re-fap.fr" className="carter-button">
-            Trouver un <br/>Carter Cash 🛠️
+              Trouver un <br/>Carter Cash 🛠️
             </a>
           </div>
         </div>
@@ -111,20 +118,15 @@ export default function Home() {
             onChange={(e) => setInput(e.target.value)}
             autoComplete="off"
             id="user-input"
+            disabled={blocked} // <-- input bloqué si limite atteinte
           />
-          <button type="submit">Envoyer</button>
+          <button type="submit" disabled={blocked}>Envoyer</button> {/* <-- bouton bloqué */}
         </form>
       </main>
-        <footer className="footer">
+
+      <footer className="footer">
         <p>⚠️ AutoAI peut faire des erreurs, envisagez de vérifier les informations importantes.</p>
       </footer>
     </>
   );
 }
-
-
-
-
-
-
-
