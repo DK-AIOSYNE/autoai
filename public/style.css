@@ -6,7 +6,21 @@ body {
   padding: 0;
   color: #2b2f36;
 }
-
+.footer {
+  background-color: #f2f4f8; /* fond clair, doux */
+  color: #555;              /* texte gris sombre */
+  font-size: 0.85rem;       /* un peu plus petit que le texte normal */
+  text-align: center;       /* centré */
+  padding: 10px 20px;       /* espace autour du texte */
+  border-top: 1px solid #ddd; /* séparateur léger */
+  position: fixed;          /* reste en bas de l'écran */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.05); /* ombre subtile */
+  z-index: 100;             /* toujours au-dessus du contenu */
+  font-family: 'Inter', sans-serif; /* police moderne */
+}
 .container {
   max-width: 900px;
   margin: 2rem auto;
@@ -254,6 +268,7 @@ button:hover {
     padding: 0.7rem 1rem;
     font-size: 1rem;
   }
+
 
 
 
