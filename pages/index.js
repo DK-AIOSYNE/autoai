@@ -31,7 +31,7 @@ export default function Home() {
     e.preventDefault();
     if (!input.trim() || blocked) return;
 
-    if (input.length > 1000) {
+    if (input.trim().length > 1000) {
       setError('⚠️ Ton message ne peut pas dépasser 1000 caractères.');
       return;
     }
@@ -121,7 +121,14 @@ export default function Home() {
             type="text"
             placeholder="Écris ta question ici..."
             value={input}
-            onChange={(e) => setInput(e.target.value)}
+            onChange={(e) => {
+              if (e.target.value.length <= 1000) {
+                setInput(e.target.value);
+                setError('');
+              } else {
+                setError('⚠️ Ton message ne peut pas dépasser 1000 caractères.');
+              }
+            }}
             autoComplete="off"
             id="user-input"
             disabled={blocked}
