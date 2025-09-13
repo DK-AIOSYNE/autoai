@@ -153,12 +153,11 @@ export default function Home() {
         {error && <p className="error-msg">{error}</p>}
       </main>
 
-      /*<footer className="footer">
-        <p>⚠️ AutoAI peut faire des erreurs, envisagez de vérifier les informations importantes.</p>
-      </footer>*/
+      
     </>
   );
 }
+
 
 
 
